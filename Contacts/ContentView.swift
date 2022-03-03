@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: ViewModel
+    @State private var isShowingForm = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(viewModel.contacts) { contact in
+                NavigationLink(contact.fullName, destination: ContactDetailView(contact: contact))
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isShowingForm = true
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            }
+            .sheet(isPresented: $isShowingForm) {
+                AddContactView()
+            }
+            .navigationTitle("Contacts")
+        }
     }
 }
 
