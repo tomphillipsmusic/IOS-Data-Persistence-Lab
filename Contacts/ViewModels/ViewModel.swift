@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Metal
 
 class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
