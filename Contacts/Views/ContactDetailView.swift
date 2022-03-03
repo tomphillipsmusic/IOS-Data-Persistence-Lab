@@ -8,22 +8,13 @@
 import SwiftUI
 
 struct ContactDetailView: View {
+    @EnvironmentObject var viewModel: ViewModel
     var contact: Contact
-    @State private var isEditing = false
     
     var body: some View {
         VStack {
-            if isEditing {
-                AddContactView(existingContact: contact)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button("Cancel") {
-                                withAnimation {
-                                    isEditing = false
-                                }
-                            }
-                        }
-                    }
+            if viewModel.isEditing {
+                AddContactView(existing: contact)
             } else {
                 List {
                     Section("Company") {
@@ -32,29 +23,24 @@ struct ContactDetailView: View {
                     
                     Section("Phone Number") {
                         Text(contact.phoneNumber)
-                        
                     }
                     
                     Section("Email Address") {
                         Text(contact.emailAddress)
-                        
                     }
                 }
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(isEditing ? "Cancel" : "Edit") {
+                Button(viewModel.toolbarItemText) {
                     withAnimation {
-                        isEditing.toggle()
+                        viewModel.isEditing.toggle()
                     }
                 }
             }
         }
         .navigationTitle(contact.fullName)
-        //        .sheet(isPresented: $isEditing) {
-        //            AddContactView(existingContact: contact)
-        //        }
     }
 }
 

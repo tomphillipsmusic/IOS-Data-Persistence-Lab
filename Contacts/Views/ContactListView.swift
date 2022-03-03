@@ -7,14 +7,21 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContactListView: View {
     @EnvironmentObject var viewModel: ViewModel
     @State private var isShowingForm = false
     
     var body: some View {
         NavigationView {
-            List(viewModel.contacts) { contact in
-                NavigationLink(contact.fullName, destination: ContactDetailView(contact: contact))
+            List {
+                ForEach(viewModel.contacts) { contact in
+                    NavigationLink(contact.fullName, destination: ContactDetailView(contact: contact))
+                }
+                .onDelete(perform: viewModel.delete)
+                
+                if viewModel.contacts.isEmpty {
+                    Text("Tap the plus button to add a contact")
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -35,6 +42,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContactListView()
     }
 }
