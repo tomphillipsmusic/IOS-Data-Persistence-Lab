@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ContactsApp: App {
-    @StateObject var viewModel = ViewModel(contacts: [Contact.example])
+    @StateObject var viewModel = ViewModel(contacts: Contact.testData)
     
     var body: some Scene {
         WindowGroup {

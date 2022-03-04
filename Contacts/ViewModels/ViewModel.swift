@@ -10,6 +10,15 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
+    @Published var searchText = ""
+    
+    var sortedContacts: [Contact] {
+        searchResults.sorted(by: { $0.fullName < $1.fullName })
+    }
+    
+    var searchResults: [Contact] {
+        searchText.isEmpty ? contacts : contacts.filter {$0.fullName.contains(searchText)}
+    }
     
     var toolbarItemText: String {
         return isEditing ? "Cancel" : "Edit"

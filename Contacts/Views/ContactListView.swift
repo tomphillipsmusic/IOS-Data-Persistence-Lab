@@ -14,7 +14,7 @@ struct ContactListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.contacts) { contact in
+                ForEach(viewModel.sortedContacts) { contact in
                     NavigationLink(contact.fullName, destination: ContactDetailView(contact: contact))
                 }
                 .onDelete(perform: viewModel.delete)
@@ -35,6 +35,7 @@ struct ContactListView: View {
             .sheet(isPresented: $isShowingForm) {
                 AddContactView()
             }
+            .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Contacts")
         }
     }
