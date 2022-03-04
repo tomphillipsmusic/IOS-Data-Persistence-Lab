@@ -20,6 +20,7 @@
 		3E6B480027D24F6100300A00 /* ImagePicker+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47FF27D24F6100300A00 /* ImagePicker+Coordinator.swift */; };
 		3E6B480227D250F200300A00 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480127D250F200300A00 /* AddPhotoView.swift */; };
 		3E6B480427D2708200300A00 /* ContactPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480327D2708200300A00 /* ContactPhotoView.swift */; };
+		3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480527D2919600300A00 /* EmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3E6B47FF27D24F6100300A00 /* ImagePicker+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePicker+Coordinator.swift"; sourceTree = "<group>"; };
 		3E6B480127D250F200300A00 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		3E6B480327D2708200300A00 /* ContactPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPhotoView.swift; sourceTree = "<group>"; };
+		3E6B480527D2919600300A00 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				3E6B47FA27D1653400300A00 /* Extensions */,
 				3E6B47FD27D24EF100300A00 /* ImagePicker.swift */,
 				3E6B47FF27D24F6100300A00 /* ImagePicker+Coordinator.swift */,
+				3E6B480527D2919600300A00 /* EmailValidator.swift */,
 				3E6B47E527CFF97D00300A00 /* Assets.xcassets */,
 				3E6B47E727CFF97D00300A00 /* Preview Content */,
 			);
@@ -201,6 +204,7 @@
 				3E6B47F427CFFDA800300A00 /* AddContactView.swift in Sources */,
 				3E6B480027D24F6100300A00 /* ImagePicker+Coordinator.swift in Sources */,
 				3E6B47F027CFF98500300A00 /* Contact.swift in Sources */,
+				3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */,
 				3E6B47E427CFF97D00300A00 /* ContactListView.swift in Sources */,
 				3E6B47FC27D1654200300A00 /* Array+Extension.swift in Sources */,
 				3E6B480227D250F200300A00 /* AddPhotoView.swift in Sources */,

@@ -19,6 +19,14 @@ struct Contact: Identifiable {
     var fullName: String {
         "\(firstName) \(lastName)"
     }
+    
+    func isValid() -> Bool {
+        !firstName.isEmpty &&
+        !lastName.isEmpty &&
+        !phoneNumber.isEmpty &&
+        !emailAddress.isEmpty &&
+        EmailValidator.checkIfValid(email: emailAddress)
+    }
 }
 
 extension Contact {

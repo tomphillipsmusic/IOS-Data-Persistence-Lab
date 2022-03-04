@@ -59,6 +59,7 @@ struct AddContactView: View {
                         }
                         dismiss()
                     }
+                    .disabled(!contact.isValid())
                 }
             }
             .navigationTitle(viewModel.formTitle)
