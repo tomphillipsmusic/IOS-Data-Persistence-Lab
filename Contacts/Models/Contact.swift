@@ -16,7 +16,6 @@ struct Contact: Identifiable {
     var emailAddress: String
     var image: UIImage?
     
-    
     var fullName: String {
         "\(firstName) \(lastName)"
     }

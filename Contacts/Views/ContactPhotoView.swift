@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactPhotoView: View {
     var image: UIImage?
-    var placeHolderSymbol = "person.badge.plus"
+    var placeHolderSymbol = "person"
     
     var body: some View {
         Group {

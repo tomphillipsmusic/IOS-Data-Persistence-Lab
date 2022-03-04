@@ -23,7 +23,11 @@ struct AddContactView: View {
     
     var body: some View {
         VStack {
-            AddPhotoView(image: $contact.image)
+            ZStack {
+                AddPhotoView(image: $contact.image)
+                plusSymbol
+            }
+            
             Form {
                 Section("Name") {
                     TextField("First", text: $contact.firstName)
@@ -59,6 +63,15 @@ struct AddContactView: View {
             }
             .navigationTitle(viewModel.formTitle)
         }
+    }
+    
+    var plusSymbol: some View {
+        Image(systemName: "plus")
+            .foregroundColor(.white)
+            .frame(width: 25, height: 25)
+            .background(Color.blue)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white, lineWidth: 2))
     }
 }
 
