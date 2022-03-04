@@ -5,7 +5,7 @@
 //  Created by Tom Phillips on 3/2/22.
 //
 
-import Foundation
+import SwiftUI
 
 struct Contact: Identifiable {
     var id = UUID()
@@ -14,14 +14,17 @@ struct Contact: Identifiable {
     var company: String
     var phoneNumber: String
     var emailAddress: String
+    var image: UIImage?
+    
+    
     var fullName: String {
         "\(firstName) \(lastName)"
     }
-    
-    static let example = Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "609-647-5411", emailAddress: "tomphillipsmusic@gmail.com")
 }
 
 extension Contact {
+    static let example = Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "609-647-5411", emailAddress: "tomphillipsmusic@gmail.com")
+    
     static let testData = [
         Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
         Contact(firstName: "Zoe", lastName: "Cutler", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),

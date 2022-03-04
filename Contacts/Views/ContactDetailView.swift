@@ -16,17 +16,21 @@ struct ContactDetailView: View {
             if viewModel.isEditing {
                 AddContactView(existing: contact)
             } else {
-                List {
-                    Section("Company") {
-                        Text(contact.company)
-                    }
+                VStack {
+                    ContactPhotoView(image: contact.image, placeHolderSymbol: "person")
                     
-                    Section("Phone Number") {
-                        Text(contact.phoneNumber)
-                    }
-                    
-                    Section("Email Address") {
-                        Text(contact.emailAddress)
+                    List {
+                        Section("Company") {
+                            Text(contact.company)
+                        }
+                        
+                        Section("Phone Number") {
+                            Text(contact.phoneNumber)
+                        }
+                        
+                        Section("Email Address") {
+                            Text(contact.emailAddress)
+                        }
                     }
                 }
             }
@@ -47,5 +51,6 @@ struct ContactDetailView: View {
 struct ContactDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ContactDetailView(contact: Contact.example)
+            .environmentObject(ViewModel(contacts: Contact.testData))
     }
 }

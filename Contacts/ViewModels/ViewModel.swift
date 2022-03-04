@@ -11,6 +11,7 @@ class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
     @Published var searchText = ""
+    @Published var isShowingImagePicker = false
     
     var sortedContacts: [Contact] {
         searchResults.sorted(by: { $0.fullName < $1.fullName })

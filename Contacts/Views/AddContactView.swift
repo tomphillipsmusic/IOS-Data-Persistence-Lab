@@ -22,45 +22,49 @@ struct AddContactView: View {
     }
     
     var body: some View {
-        Form {
-            Section("Name") {
-                TextField("First", text: $contact.firstName)
-                    .padding()
+        VStack {
+            AddPhotoView(image: $contact.image)
+            Form {
+                Section("Name") {
+                    TextField("First", text: $contact.firstName)
+                        .padding()
+                    
+                    TextField("Last", text: $contact.lastName)
+                        .padding()
+                }
                 
-                TextField("Last", text: $contact.lastName)
-                    .padding()
-            }
-
-            Section("Company") {
-                TextField("Company Name", text: $contact.company)
-                    .padding()
-            }
-
-            Section("Contact Information") {
-                TextField("Email", text: $contact.emailAddress)
-                    .padding()
+                Section("Company") {
+                    TextField("Company Name", text: $contact.company)
+                        .padding()
+                }
                 
-                TextField("Phone Number", text: $contact.phoneNumber)
-                    .padding()
-            }
-            
-            Section {
-                Button("Save") {
-                    if viewModel.isEditing {
-                        viewModel.update(existing: contact)
-                    } else {
-                        viewModel.save(new: contact)
+                Section("Contact Information") {
+                    TextField("Email", text: $contact.emailAddress)
+                        .padding()
+                    
+                    TextField("Phone Number", text: $contact.phoneNumber)
+                        .padding()
+                }
+                
+                Section {
+                    Button("Save") {
+                        if viewModel.isEditing {
+                            viewModel.update(existing: contact)
+                        } else {
+                            viewModel.save(new: contact)
+                        }
+                        dismiss()
                     }
-                    dismiss()
                 }
             }
+            .navigationTitle(viewModel.formTitle)
         }
-        .navigationTitle(viewModel.formTitle)
     }
 }
 
 struct AddContactView_Previews: PreviewProvider {
     static var previews: some View {
         AddContactView()
+            .environmentObject(ViewModel(contacts: Contact.testData))
     }
 }
