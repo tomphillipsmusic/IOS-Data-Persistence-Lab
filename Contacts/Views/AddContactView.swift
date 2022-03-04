@@ -23,10 +23,7 @@ struct AddContactView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                AddPhotoView(image: $contact.image)
-                plusSymbol
-            }
+            AddPhotoView(image: $contact.image)
             
             Form {
                 Section("Name") {
@@ -52,11 +49,7 @@ struct AddContactView: View {
                 
                 Section {
                     Button("Save") {
-                        if viewModel.isEditing {
-                            viewModel.update(existing: contact)
-                        } else {
-                            viewModel.save(new: contact)
-                        }
+                        viewModel.submit(contact)
                         dismiss()
                     }
                     .disabled(!contact.isValid())
@@ -64,15 +57,6 @@ struct AddContactView: View {
             }
             .navigationTitle(viewModel.formTitle)
         }
-    }
-    
-    var plusSymbol: some View {
-        Image(systemName: "plus")
-            .foregroundColor(.white)
-            .frame(width: 25, height: 25)
-            .background(Color.blue)
-            .clipShape(Circle())
-            .overlay(Circle().stroke(Color.white, lineWidth: 2))
     }
 }
 

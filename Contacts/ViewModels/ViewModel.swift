@@ -11,14 +11,13 @@ class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
     @Published var searchText = ""
-    @Published var isShowingImagePicker = false
-    
-    var sortedContacts: [Contact] {
-        searchResults.sorted(by: { $0.fullName < $1.fullName })
-    }
     
     var searchResults: [Contact] {
         searchText.isEmpty ? contacts : contacts.filter {$0.fullName.contains(searchText)}
+    }
+    
+    var sortedContacts: [Contact] {
+        searchResults.sorted(by: { $0.fullName < $1.fullName })
     }
     
     var toolbarItemText: String {
@@ -31,6 +30,14 @@ class ViewModel: ObservableObject {
     
     init(contacts: [Contact]) {
         self.contacts = contacts
+    }
+    
+    func submit(_ contact: Contact) {
+        if isEditing {
+            update(existing: contact)
+        } else {
+            save(new: contact)
+        }
     }
     
     func save(new newContact: Contact) {

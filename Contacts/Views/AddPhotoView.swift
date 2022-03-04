@@ -10,26 +10,30 @@ import SwiftUI
 struct AddPhotoView: View {
     @Binding var image: UIImage?
     @State private var isShowingImagePicker = false
-    var profileImage: Image
-    {
-        if let image = image {
-            return Image(uiImage: image)
-        } else {
-            return Image(systemName: "person.badge.plus")
-            
-        }
-    }
     
     var body: some View {
         Button(action: {
             isShowingImagePicker = true
         }, label: {
-            ContactPhotoView(image: image)
+            ZStack {
+                ContactPhotoView(image: image)
+                plusSymbol
+            }
         })
             .buttonStyle(.plain)
             .sheet(isPresented: $isShowingImagePicker) {
                 ImagePicker(image: $image)
             }
+        
+    }
+    
+    var plusSymbol: some View {
+        Image(systemName: "plus")
+            .foregroundColor(.white)
+            .frame(width: 25, height: 25)
+            .background(Color.blue)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white, lineWidth: 2))
     }
 }
 
