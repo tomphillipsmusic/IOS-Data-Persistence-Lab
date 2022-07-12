@@ -18,6 +18,10 @@ We will begin with a starter app and refactor it five times to cover each persis
 ## Stage 5: CoreData and CloudKit
 
 
-### Required
-- Completed the prerequisite learning objectives
+### Prerequisites
 - Developer account (for stages 4 and 5)
+- data modeling
+- core swift learning objectives
+- await
+- async
+- closures
