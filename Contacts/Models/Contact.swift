@@ -45,7 +45,6 @@ extension Contact {
         Contact(firstName: "Sarah", lastName: "Gretter", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
         Contact(firstName: "Telayne", lastName: "Keith", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
         Contact(firstName: "Arlaya", lastName: "Worthen", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
-        Contact(firstName: "Cat", lastName: "Colvin", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
-        Contact(firstName: "Renisha", lastName: "Bishop", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com")
+        Contact(firstName: "Cat", lastName: "Colvin", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com")
     ]
 }
