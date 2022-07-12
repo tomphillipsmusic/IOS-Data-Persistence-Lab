@@ -4,6 +4,10 @@ In this lab we will cover Data Persistence in the Apple ecosystem. Data persiste
 
 We will begin with a starter app and refactor it five times to cover each persistence method. While it it possible to jump in at any level we recommend doing all of them to understand the pros and cons of each. Feel free to go at your own pace and work with others.
 
+
+# Important
+When you first clone the project you will need to changing the signing and capabilities to your own account.
+
 ## Stage 1: User Defaults
 - LOs
 - resources
