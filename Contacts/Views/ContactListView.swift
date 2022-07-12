@@ -43,6 +43,6 @@ struct ContactListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactListView()
+        ContactListView().environmentObject(ViewModel(contacts: Contact.testData))
     }
 }
