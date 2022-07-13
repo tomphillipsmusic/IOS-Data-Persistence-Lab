@@ -16,9 +16,7 @@ struct ContactDetailView: View {
             if viewModel.isEditing {
                 AddContactView(existing: contact)
             } else {
-                VStack {
-                    //ContactPhotoView(image: contact.image)
-                    
+                VStack {  
                     List {
                         Section("Company") {
                             Text(contact.company)

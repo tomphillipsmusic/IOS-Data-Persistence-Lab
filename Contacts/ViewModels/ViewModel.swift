@@ -58,7 +58,10 @@ class ViewModel: ObservableObject {
     }
     
     func delete(at offsets: IndexSet) {
-        contacts.remove(atOffsets: offsets)
-        JSONUtility.write(contacts)
+        if let index = offsets.first,
+           let indexToDelete = contacts.firstIndex(where: {$0.id == sortedContacts[index].id}){
+            contacts.remove(at: indexToDelete)
+            JSONUtility.write(contacts)
+        }
     }
 }

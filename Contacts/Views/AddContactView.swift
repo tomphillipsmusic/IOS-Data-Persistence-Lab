@@ -23,8 +23,6 @@ struct AddContactView: View {
     
     var body: some View {
         VStack {
-            //AddPhotoView(image: $contact.image)
-            
             Form {
                 Section("Name") {
                     TextField("First", text: $contact.firstName)
