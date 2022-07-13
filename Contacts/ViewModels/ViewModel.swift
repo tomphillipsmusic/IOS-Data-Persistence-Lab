@@ -51,6 +51,9 @@ class ViewModel: ObservableObject {
     }
     
     func delete(at offsets: IndexSet) {
-        contacts.remove(atOffsets: offsets)
+        if let index = offsets.first,
+           let indexToDelete = contacts.firstIndex(where: {$0.id == sortedContacts[index].id}){
+            contacts.remove(at: indexToDelete)
+        }
     }
 }
