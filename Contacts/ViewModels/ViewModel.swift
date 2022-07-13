@@ -43,7 +43,11 @@ class ViewModel: ObservableObject {
     }
     
     func save(new newContact: Contact) {
+        
+        // we want to convert a contact to JSON and save it here
         contacts.append(newContact)
+        JSONUtility.write(contacts)
+
         isEditing = false
     }
     
