@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
-    @Published var searchText = ""
+    let defaults = UserDefaults.standard
+    @AppStorage("searchText") var searchText = ""
     
     var searchResults: [Contact] {
         searchText.isEmpty ? contacts : contacts.filter {$0.fullName.lowercased().contains(searchText.lowercased())}
@@ -41,12 +43,17 @@ class ViewModel: ObservableObject {
     }
     
     func save(new newContact: Contact) {
+        
+        // we want to convert a contact to JSON and save it here
         contacts.append(newContact)
+        JSONUtility.write(contacts)
+
         isEditing = false
     }
     
     func update(existing contact: Contact) {
         contacts.update(existing: contact)
+        JSONUtility.write(contacts)
         isEditing = false
     }
     
@@ -54,6 +61,7 @@ class ViewModel: ObservableObject {
         if let index = offsets.first,
            let indexToDelete = contacts.firstIndex(where: {$0.id == sortedContacts[index].id}){
             contacts.remove(at: indexToDelete)
+            JSONUtility.write(contacts)
         }
     }
 }

@@ -23,7 +23,6 @@ struct AddContactView: View {
     
     var body: some View {
         VStack {
-           
             Form {
                 Section("Name") {
                     TextField("First", text: $contact.firstName)

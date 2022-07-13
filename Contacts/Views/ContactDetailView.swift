@@ -16,9 +16,7 @@ struct ContactDetailView: View {
             if viewModel.isEditing {
                 AddContactView(existing: contact)
             } else {
-                VStack {
-                  
-                    
+                VStack {  
                     List {
                         Section("Company") {
                             Text(contact.company)
