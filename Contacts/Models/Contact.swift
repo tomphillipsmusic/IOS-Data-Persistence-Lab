@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Contact: Identifiable {
+struct Contact: Identifiable, Codable {
     var id = UUID()
     var firstName: String
     var lastName: String
     var company: String
     var phoneNumber: String
     var emailAddress: String
-    var image: UIImage?
+    //var image: UIImage?
     
     var fullName: String {
         "\(firstName) \(lastName)"
