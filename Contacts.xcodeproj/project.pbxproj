@@ -16,7 +16,6 @@
 		3E6B47F427CFFDA800300A00 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47F327CFFDA700300A00 /* AddContactView.swift */; };
 		3E6B47F627D01A4B00300A00 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47F527D01A4B00300A00 /* ViewModel.swift */; };
 		3E6B47FC27D1654200300A00 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47FB27D1654200300A00 /* Array+Extension.swift */; };
-		3E6B480427D2708200300A00 /* ContactPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480327D2708200300A00 /* ContactPhotoView.swift */; };
 		3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480527D2919600300A00 /* EmailValidator.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		3E6B47F327CFFDA700300A00 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		3E6B47F527D01A4B00300A00 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3E6B47FB27D1654200300A00 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		3E6B480327D2708200300A00 /* ContactPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPhotoView.swift; sourceTree = "<group>"; };
 		3E6B480527D2919600300A00 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +89,6 @@
 				3E6B47E327CFF97D00300A00 /* ContactListView.swift */,
 				3E6B47F327CFFDA700300A00 /* AddContactView.swift */,
 				3E6B47F127CFFAC300300A00 /* ContactDetailView.swift */,
-				3E6B480327D2708200300A00 /* ContactPhotoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6B47F227CFFAC300300A00 /* ContactDetailView.swift in Sources */,
-				3E6B480427D2708200300A00 /* ContactPhotoView.swift in Sources */,
 				3E6B47F427CFFDA800300A00 /* AddContactView.swift in Sources */,
 				3E6B47F027CFF98500300A00 /* Contact.swift in Sources */,
 				3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */,
