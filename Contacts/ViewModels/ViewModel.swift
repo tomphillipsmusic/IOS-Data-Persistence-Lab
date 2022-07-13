@@ -6,17 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
     let defaults = UserDefaults.standard
-    @Published var searchText = UserDefaults.standard.string(forKey: "searchText") ?? "" {
-        didSet{
-            defaults.set(searchText, forKey: "searchText")
-
-        }
-    }
+    @AppStorage("searchText") var searchText = ""
     
     var searchResults: [Contact] {
         searchText.isEmpty ? contacts : contacts.filter {$0.fullName.lowercased().contains(searchText.lowercased())}
