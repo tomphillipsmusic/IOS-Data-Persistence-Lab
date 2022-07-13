@@ -17,7 +17,7 @@ struct ContactDetailView: View {
                 AddContactView(existing: contact)
             } else {
                 VStack {
-                    ContactPhotoView(image: contact.image)
+                  
                     
                     List {
                         Section("Company") {
