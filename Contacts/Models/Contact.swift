@@ -14,7 +14,6 @@ struct Contact: Identifiable {
     var company: String
     var phoneNumber: String
     var emailAddress: String
-    var image: UIImage?
     
     var fullName: String {
         "\(firstName) \(lastName)"
