@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     @Published var searchText = ""
     
     var searchResults: [Contact] {
-        searchText.isEmpty ? contacts : contacts.filter {$0.fullName.contains(searchText)}
+        searchText.isEmpty ? contacts : contacts.filter {$0.fullName.lowercased().contains(searchText.lowercased())}
     }
     
     var sortedContacts: [Contact] {
