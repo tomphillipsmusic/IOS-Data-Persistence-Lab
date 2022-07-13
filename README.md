@@ -9,9 +9,18 @@ We will begin with a starter app and refactor it five times to cover each persis
 When you first clone the project you will need to changing the signing and capabilities to your own account.
 
 ## Stage 1: User Defaults
-- LOs
-- resources
-- description of stage and its task
+- LOs TBD
+
+- Description:
+  - "One common way to store a small amount of data is called UserDefaults, and it’s great for simple user preferences. There is no specific number attached to “a small amount”, but everything you store in UserDefaults will automatically be loaded when your app launches – if you store a lot in there your app launch will slow down. To give you at least an idea, you should aim to store no more than 512KB in there." -Hacking with Swift
+
+- Resources
+  - [basic user defaults](https://www.hackingwithswift.com/read/12/2/reading-and-writing-basics-userdefaults)
+  - [user defaults with @AppStorage in SwiftUI](https://www.hackingwithswift.com/books/ios-swiftui/storing-user-settings-with-userdefaults)
+- Challenge
+  - Store the search text in user defaults
+  - If done properly the app should remember your last search text when you close and reopen the app
+  - Try this task with user defaults first then with @AppStorage
 
 ## Stage 2: JSON
 
