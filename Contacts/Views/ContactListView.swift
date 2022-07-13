@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContactListView: View {
     @EnvironmentObject var viewModel: ViewModel
+    @Environment(\.managedObjectContext) var managedObjectContext
+   
+    @FetchRequest(sortDescriptors: [], predicate: nil) var contacts: FetchedResults<CoreDataContact>
     @State private var isShowingForm = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.sortedContacts) { contact in
-                    NavigationLink(contact.fullName, destination: ContactDetailView(contact: contact))
+//                ForEach(viewModel.sortedContacts) {
+                ForEach(contacts){
+                contact in
+                    NavigationLink(contact.fullName, destination: ContactDetailView(contact: Contact(coreDataContact: contact)))
+//                    Text(contact.firstName ?? "" + contact.lastName ?? "")
                 }
                 .onDelete(perform: viewModel.delete)
                 

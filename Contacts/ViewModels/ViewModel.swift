@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreData
 
 class ViewModel: ObservableObject {
+    @Environment(\.managedObjectContext) var managedObjectContext
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
     @Published var searchText = ""
@@ -42,6 +45,13 @@ class ViewModel: ObservableObject {
     
     func save(new newContact: Contact) {
         contacts.append(newContact)
+        let coreDataContact = CoreDataContact(contact: newContact, context: managedObjectContext)
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print(error)
+        }
+        
         isEditing = false
     }
     

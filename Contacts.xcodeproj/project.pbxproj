@@ -17,6 +17,10 @@
 		3E6B47F627D01A4B00300A00 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47F527D01A4B00300A00 /* ViewModel.swift */; };
 		3E6B47FC27D1654200300A00 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B47FB27D1654200300A00 /* Array+Extension.swift */; };
 		3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B480527D2919600300A00 /* EmailValidator.swift */; };
+		6DB44C67287F63F100E5420E /* CoreDataContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB44C65287F63F100E5420E /* CoreDataContact+CoreDataClass.swift */; };
+		6DB44C68287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB44C66287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift */; };
+		6DC733D8287F5D5D0002C627 /* CoreDataContact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DC733D6287F5D5D0002C627 /* CoreDataContact.xcdatamodeld */; };
+		6DC733F9287F5E3A0002C627 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC733F8287F5E3A0002C627 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		3E6B47F527D01A4B00300A00 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3E6B47FB27D1654200300A00 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		3E6B480527D2919600300A00 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		6DB44C65287F63F100E5420E /* CoreDataContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataContact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6DB44C66287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
+		6DC733F8287F5E3A0002C627 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,10 @@
 		3E6B47D527CFF97D00300A00 = {
 			isa = PBXGroup;
 			children = (
+				6DB44C65287F63F100E5420E /* CoreDataContact+CoreDataClass.swift */,
+				6DB44C66287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift */,
+				6DC733D6287F5D5D0002C627 /* CoreDataContact.xcdatamodeld */,
+				6DC733F8287F5E3A0002C627 /* PersistenceController.swift */,
 				3E6B47E027CFF97D00300A00 /* Contacts */,
 				3E6B47DF27CFF97D00300A00 /* Products */,
 			);
@@ -196,13 +208,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6B47F227CFFAC300300A00 /* ContactDetailView.swift in Sources */,
+				6DB44C68287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift in Sources */,
 				3E6B47F427CFFDA800300A00 /* AddContactView.swift in Sources */,
 				3E6B47F027CFF98500300A00 /* Contact.swift in Sources */,
 				3E6B480627D2919600300A00 /* EmailValidator.swift in Sources */,
 				3E6B47E427CFF97D00300A00 /* ContactListView.swift in Sources */,
+				6DC733D8287F5D5D0002C627 /* CoreDataContact.xcdatamodeld in Sources */,
 				3E6B47FC27D1654200300A00 /* Array+Extension.swift in Sources */,
 				3E6B47F627D01A4B00300A00 /* ViewModel.swift in Sources */,
+				6DB44C67287F63F100E5420E /* CoreDataContact+CoreDataClass.swift in Sources */,
 				3E6B47E227CFF97D00300A00 /* ContactsApp.swift in Sources */,
+				6DC733F9287F5E3A0002C627 /* PersistenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6DC733D6287F5D5D0002C627 /* CoreDataContact.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */,
+			);
+			currentVersion = 6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */;
+			path = CoreDataContact.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3E6B47D627CFF97D00300A00 /* Project object */;
 }

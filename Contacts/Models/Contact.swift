@@ -26,6 +26,23 @@ struct Contact: Identifiable {
         !emailAddress.isEmpty &&
         EmailValidator.checkIfValid(email: emailAddress)
     }
+    
+    init(coreDataContact: CoreDataContact){
+        self.id = coreDataContact.id ?? UUID()
+        self.firstName = coreDataContact.unwrappedFirstName
+        self.lastName = coreDataContact.unwrappedLastName
+        self.company = coreDataContact.unwrappedCompany
+        self.phoneNumber = coreDataContact.unwrappedPhoneNumber
+        self.emailAddress = coreDataContact.unwrappedEmailAddress
+    }
+    
+    init(firstName: String, lastName: String, company: String, phoneNumber: String, emailAddress: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.company = company
+        self.phoneNumber = phoneNumber
+        self.emailAddress = emailAddress
+    }
 }
 
 extension Contact {
