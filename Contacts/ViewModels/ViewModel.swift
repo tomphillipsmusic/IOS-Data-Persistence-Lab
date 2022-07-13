@@ -10,7 +10,13 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
-    @Published var searchText = ""
+    let defaults = UserDefaults.standard
+    @Published var searchText = UserDefaults.standard.string(forKey: "searchText") ?? "" {
+        didSet{
+            defaults.set(searchText, forKey: "searchText")
+
+        }
+    }
     
     var searchResults: [Contact] {
         searchText.isEmpty ? contacts : contacts.filter {$0.fullName.lowercased().contains(searchText.lowercased())}
