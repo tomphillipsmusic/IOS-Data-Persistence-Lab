@@ -53,10 +53,12 @@ class ViewModel: ObservableObject {
     
     func update(existing contact: Contact) {
         contacts.update(existing: contact)
+        JSONUtility.write(contacts)
         isEditing = false
     }
     
     func delete(at offsets: IndexSet) {
         contacts.remove(atOffsets: offsets)
+        JSONUtility.write(contacts)
     }
 }
