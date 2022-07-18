@@ -15,7 +15,7 @@ struct ContactsApp: App {
         WindowGroup {
             ContactListView()
                 .environmentObject(viewModel)
-                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
         }
     }
 }

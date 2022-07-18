@@ -10,7 +10,8 @@ import SwiftUI
 import CoreData
 
 class ViewModel: ObservableObject {
-    @Environment(\.managedObjectContext) var managedObjectContext
+//    @Environment(\.managedObjectContext) var managedObjectContext
+    var managedObjectContext = PersistenceController.shared.container.viewContext
     @Published private(set) var contacts: [Contact]
     @Published var isEditing = false
     @Published var searchText = ""

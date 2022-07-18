@@ -35,6 +35,7 @@
 		3E6B47F527D01A4B00300A00 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3E6B47FB27D1654200300A00 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		3E6B480527D2919600300A00 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		6DA75F0F2885B11000FA09C7 /* Contact 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Contact 2.xcdatamodel"; sourceTree = "<group>"; };
 		6DB44C65287F63F100E5420E /* CoreDataContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataContact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6DB44C66287F63F100E5420E /* CoreDataContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Contact.xcdatamodel; sourceTree = "<group>"; };
@@ -428,9 +429,10 @@
 		6DC733D6287F5D5D0002C627 /* CoreDataContact.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				6DA75F0F2885B11000FA09C7 /* Contact 2.xcdatamodel */,
 				6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */,
 			);
-			currentVersion = 6DC733D7287F5D5D0002C627 /* Contact.xcdatamodel */;
+			currentVersion = 6DA75F0F2885B11000FA09C7 /* Contact 2.xcdatamodel */;
 			path = CoreDataContact.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
