@@ -30,7 +30,7 @@ struct Contact: Identifiable {
 }
 
 extension Contact {
-    static let example = Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "609-647-5411", emailAddress: "tomphillipsmusic@gmail.com")
+    static let example = Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "tomphillipsmusic@gmail.com")
     
     static let testData = [
         Contact(firstName: "Tom", lastName: "Phillips", company: "Apple Developer Academy", phoneNumber: "123-456-7890", emailAddress: "example@developeracademy.com"),
