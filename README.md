@@ -9,7 +9,6 @@ We will begin with a starter app and refactor it five times to cover each persis
 When you first clone the project you will need to changing the signing and capabilities to your own account.
 
 ## Stage 1: User Defaults
-- LOs TBD
 
 - Description:
   - "One common way to store a small amount of data is called UserDefaults, and it’s great for simple user preferences. There is no specific number attached to “a small amount”, but everything you store in UserDefaults will automatically be loaded when your app launches – if you store a lot in there your app launch will slow down. To give you at least an idea, you should aim to store no more than 512KB in there." -Hacking with Swift
@@ -23,7 +22,6 @@ When you first clone the project you will need to changing the signing and capab
   - Try this task with user defaults first then with @AppStorage
 
 ## Stage 2: JSON
-- LOs TBD
 
 - Description:
   - Java Script Object Notation (JSON) is an industry standard for passing data between sources. JSON is very common and it is beneficial to be knowledgeable on the subject. In the context of data persistence, JSON is a convenient way to save data locally in your app. With JSON we can save more complicated data structures and greater sizes of data. Swift's Codable protocol helps us convert our custom data types into JSON. 
@@ -40,6 +38,8 @@ When you first clone the project you will need to changing the signing and capab
   - When the user adds, edits, or deletes a contact, that change should be written to a JSON file saved in the document directory
   - When the app loads it should read the JSON file to populate the contacts list
   - Bonus challenge: use [Generics](https://docs.swift.org/swift-book/LanguageGuide/Generics.html) in your read / write functions
+
+TODO:
 
 ## Stage 3: CoreData
 
